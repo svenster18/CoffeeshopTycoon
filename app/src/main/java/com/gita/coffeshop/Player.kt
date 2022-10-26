@@ -3,5 +3,6 @@ package com.gita.coffeshop
 data class Player (
     var username: String? = null,
     var password: String? = null,
-    var playerName: Int = 0
+    var playerName: String? = null,
+    var isLoggedIn: Boolean = false
 )
