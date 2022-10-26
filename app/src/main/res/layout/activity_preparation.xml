@@ -1,18 +1,433 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FF9800"
     tools:context=".PreparationActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/welcome"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/balance"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/day"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+
+        <TextView
+            android:id="@+id/tv_thunderstorm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Thunderstorm"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_day" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_recipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:textAlignment="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_thunderstorm">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_recipes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:text="RECIPES"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_coffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Coffee"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recipes" />
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_up_coffee"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_coffee"
+                    app:layout_constraintStart_toStartOf="@+id/tv_coffee"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_coffee"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_24" />
+
+                <EditText
+                    android:id="@+id/ed_textnumber_coffee"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_arrow_up_coffee"
+                    app:layout_constraintStart_toStartOf="@+id/btn_arrow_up_coffee"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_arrow_up_coffee" />
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_down_coffee"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintEnd_toEndOf="@+id/ed_textnumber_coffee"
+                    app:layout_constraintStart_toStartOf="@+id/ed_textnumber_coffee"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_textnumber_coffee"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                <TextView
+                    android:id="@+id/tv_milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Milk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recipes" />
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_up_milk"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_milk"
+                    app:layout_constraintStart_toStartOf="@+id/tv_milk"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_milk"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_24" />
+
+                <EditText
+                    android:id="@+id/ed_textnumber_milk"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="1dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_arrow_up_milk"
+                    app:layout_constraintStart_toStartOf="@+id/btn_arrow_up_milk"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_arrow_up_milk" />
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_down_milk"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintEnd_toEndOf="@+id/ed_textnumber_milk"
+                    app:layout_constraintStart_toStartOf="@+id/ed_textnumber_milk"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_textnumber_milk"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                <TextView
+                    android:id="@+id/tv_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Water"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recipes" />
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_up_water"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_water"
+                    app:layout_constraintStart_toStartOf="@+id/tv_water"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_water"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_24" />
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_down_water"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="1dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintEnd_toEndOf="@+id/ed_textnumber_water"
+                    app:layout_constraintStart_toStartOf="@+id/ed_textnumber_water"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_textnumber_water"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                <EditText
+                    android:id="@+id/ed_textnumber_water"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_arrow_up_water"
+                    app:layout_constraintStart_toStartOf="@+id/btn_arrow_up_water"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_arrow_up_water" />
+
+                <TextView
+                    android:id="@+id/tv_costpercup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:autoText="false"
+                    android:text="cost per cup of coffee is "
+                    app:layout_constraintStart_toStartOf="@+id/tv_how"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_arrow_down_milk" />
+
+                <TextView
+                    android:id="@+id/tv_idr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/idr"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_costpercup"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_how"
+                    app:layout_constraintStart_toEndOf="@+id/tv_costpercup"
+                    app:layout_constraintTop_toTopOf="@+id/tv_costpercup"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_how"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="how many cup do you want to sell ?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_costpercup" />
+
+                <EditText
+                    android:id="@+id/ed_textnumber_sell"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_how"
+                    app:layout_constraintStart_toStartOf="@+id/tv_how"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_how" />
+
+                <TextView
+                    android:id="@+id/tv_setsell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="set selling price"
+                    app:layout_constraintEnd_toEndOf="@+id/ed_textnumber_sell"
+                    app:layout_constraintStart_toStartOf="@+id/ed_textnumber_sell"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_textnumber_sell" />
+
+                <EditText
+                    android:id="@+id/ed_extnumber_setsell"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_setsell"
+                    app:layout_constraintStart_toStartOf="@+id/tv_setsell"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_setsell" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_locations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_recipes">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_locations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="LOCATIONS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/sp_locations"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_locations"
+                    app:layout_constraintStart_toStartOf="@+id/tv_locations"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_locations" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_todaycosts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_locations">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_todaycosts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="TODAY COSTS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_cupofcoffee"
+                    android:layout_width="128dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:autoText="true"
+                    android:text="@string/cup_of_coffee"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_todaycosts" />
+
+                <TextView
+                    android:id="@+id/tv_idr_cup_of_coffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="IDR %1$s"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_cupofcoffee" />
+
+                <TextView
+                    android:id="@+id/tv_location_rent"
+                    android:layout_width="106dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:autoText="true"
+                    android:text="Location Rent %1$s"
+                    app:layout_constraintStart_toStartOf="@+id/tv_cupofcoffee"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_cupofcoffee" />
+
+                <TextView
+                    android:id="@+id/tv_idr_location_rent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/idr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_location_rent" />
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="TOTAL"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_location_rent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location_rent" />
+
+                <TextView
+                    android:id="@+id/tv_idr_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/idr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_total" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_preparation"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#FF9800"
+            android:text="START DAY"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_todaycosts" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
