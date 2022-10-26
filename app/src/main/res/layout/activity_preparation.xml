@@ -284,8 +284,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_locations"
-            android:layout_width="0dp"
+            android:id="@+id/cv_results"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
@@ -301,7 +301,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/tv_locations"
+                    android:id="@+id/tv_revenues"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -316,9 +316,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/tv_locations"
-                    app:layout_constraintStart_toStartOf="@+id/tv_locations"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_locations" />
+                    app:layout_constraintEnd_toEndOf="@+id/tv_revenues"
+                    app:layout_constraintStart_toStartOf="@+id/tv_revenues"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_revenues" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -326,7 +326,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_todaycosts"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
@@ -335,7 +335,7 @@
             app:cardElevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cv_locations">
+            app:layout_constraintTop_toBottomOf="@+id/cv_results">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -416,17 +416,19 @@
 
         <Button
             android:id="@+id/btn_preparation"
-            android:layout_width="120dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:backgroundTint="#FF9800"
             android:text="START DAY"
             app:cornerRadius="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cv_todaycosts" />
+            app:layout_constraintTop_toBottomOf="@+id/cv_todaycosts"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

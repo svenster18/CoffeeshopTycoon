@@ -5,4 +5,5 @@
     <string name="day">Day %1$d</string>
     <string name="idr">IDR %1$s</string>
     <string name="cup_of_coffee">%1$d cup of coffee @IDR %2$s</string>
+    <string name="day_result">Day %1$d Result</string>
 </resources>
