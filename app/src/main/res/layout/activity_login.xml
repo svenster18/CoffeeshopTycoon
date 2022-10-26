@@ -64,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:backgroundTint="@android:color/holo_orange_dark"
+        android:ellipsize="end"
         android:text="Login"
         android:textAllCaps="false"
         app:cornerRadius="30dp"
